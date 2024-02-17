@@ -10,7 +10,7 @@ u_max=1;    %Maximum value for input
 % \U_k = \V^n_u Np \subset \Z^p; p=n_u Np
 
 n_u = 3;             % Number of inputs u=[Sa Sb Sc]'
-Np = 7;              % Prediction Horizon length
+Np = 2;              % Prediction Horizon length
 p = n_u*Np;          % Length of switching sequences U_k
 Kbest = 8;           % Kb parameter for K-best SDA
 Niter_max = 32000;   % Maximum number of explored nodes for SDA
@@ -111,7 +111,7 @@ U_bar_unc = H*U_unc;          % Center of the sphere in the transformed space
 
 %% Initial Vector U_ini -> Only for SDA
 U_ini = zeros(p,1);               % Null vector
-%U_vec_ini=round(U_vec_unc);    % Babai
+% U_vec_ini=round(U_vec_unc);    % Babai
 % for k =1 : p
 %    if (U_vec_ini(k,1)<u_min)
 %        U_vec_ini(k,1)=u_min;
